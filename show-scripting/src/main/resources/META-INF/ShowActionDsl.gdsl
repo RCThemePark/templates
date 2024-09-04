@@ -1,0 +1,12 @@
+// File: ShowActionDsl.gdsl
+def dsl = [
+        name: 'ShowAction DSL',
+        version: '1.0',
+        baseScript: 'net.rcthemepark.showscripting.groovy.dsl.TimecodeDsl'
+]
+
+contribute(dsl) {
+    method name: 'cmd', type: 'void', params: [closure: Closure<String>], doc: 'Define a command action'
+    method name: 'text', type: 'void', params: [closure: Closure<String>], doc: 'Define a text action'
+    method name: 'sequence', type: 'void', params: [closure: Closure<String>], doc: 'Define a sequence action'
+}
